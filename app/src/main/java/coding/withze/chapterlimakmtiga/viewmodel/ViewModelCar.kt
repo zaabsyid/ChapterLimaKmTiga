@@ -36,7 +36,7 @@ class ViewModelCar : ViewModel() {
     }
 
     fun callUpdateApiCar(id : Int, name: String, category: String, price: Int, status: Boolean, image: String){
-        RetrofitClient.instance.updateDataCar(id, name, category, price, status, image)
+        RetrofitClient.instance.updateDataCar(id, DataCar(name, category, price, status, image))
             .enqueue(object : Callback<List<PutResponseCar>>{
                 override fun onResponse(
                     call: Call<List<PutResponseCar>>,

@@ -22,6 +22,10 @@ class CarAdapter(var listCar : List<ResponseDataCarItem>):RecyclerView.Adapter<C
         holder.binding.categoryCar.text = listCar[position].category
         holder.binding.priceCar.text = listCar[position].price.toString()
         Glide.with(holder.itemView).load(listCar[position].image).into(holder.binding.imgCar)
+
+        holder.binding.cvCar.setOnClickListener {
+
+        }
     }
 
     override fun getItemCount(): Int {
